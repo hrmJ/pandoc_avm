@@ -1,0 +1,4 @@
+pylatex
+pyparsing
+panflute
+dominate

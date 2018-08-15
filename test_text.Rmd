@@ -1,0 +1,37 @@
+---
+output:
+  pdf_document: 
+    latex_engine: xelatex
+    pandoc_args:
+      - --filter
+      - pandoc_avm
+---
+
+# My very own test doc
+
+Hello, there. I am a text document containing
+the following cx matrix. Notice, that it is essentially a code block:
+
+    <cx>
+        <nobox>
+            [
+                [[gf=adv][prag=[df=muu]][sem=aika,muutos]]
+                [[gf=subj]]
+                [[cat=V]]
+                [[gf=compl]]
+            ]
+        </nobox>
+    </cx>
+
+Now this document continues with a lot of important
+remarks left. Let us start by noting that the sun is shining.
+
+Hello
+
+# Another header
+
+and here we go
+
+## Birds in the sky
+
+lalalaa I love them.

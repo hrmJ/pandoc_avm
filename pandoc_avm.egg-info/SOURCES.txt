@@ -1,0 +1,15 @@
+README.md
+pandoc_avm/Construction.py
+pandoc_avm/Node.py
+pandoc_avm/__init__.py
+pandoc_avm/drawconstructions.py
+pandoc_avm/pandoc_avm.py
+pandoc_avm/texnodes.py
+pandoc_avm/utilities.py
+pandoc_avm.egg-info/PKG-INFO
+pandoc_avm.egg-info/SOURCES.txt
+pandoc_avm.egg-info/dependency_links.txt
+pandoc_avm.egg-info/entry_points.txt
+pandoc_avm.egg-info/not-zip-safe
+pandoc_avm.egg-info/requires.txt
+pandoc_avm.egg-info/top_level.txt

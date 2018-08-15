@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pandoc-avm
+Version: 0.1
+Summary: a pandoc filter for drawing construction grammar like box matrices (AVMs)
+Home-page: http://github.com/hrmJ/pandoc_avm
+Author: Juho Härme
+Author-email: juho.harme@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
