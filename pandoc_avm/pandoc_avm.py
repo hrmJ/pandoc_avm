@@ -11,12 +11,18 @@ def CreateAvm(raw, cxtype):
 
     -- raw: the source string (<cx>...</cx>)
     -- cxtype: tex or html
+
     """
+
     x = parseString(raw)
+    label = x.childNodes[0].getAttribute("label")
+    caption = x.childNodes[0].getAttribute("caption")
+
     if cxtype == "tex":
-        cx = Texconstruction()
+        cx = Texconstruction(caption, label)
     elif cxtype == "html":
         cx = Htmlconstruction()
+
     for node in x.childNodes[0].childNodes:
         if node.nodeName != "#text":
             cx_string = nestedExpr('[',']').parseString(node.childNodes[0].data)
@@ -41,7 +47,7 @@ def avm(elem, doc):
     The actual panflute style pandoc filter
     """
     if isinstance(elem, pf.CodeBlock):
-        if "<cx>" in elem.text:
+        if "<cx" in elem.text:
             if doc.format == 'latex':
                 return pf.RawBlock(CreateAvm(elem.text,"tex"),"latex")
             elif doc.format == 'html':

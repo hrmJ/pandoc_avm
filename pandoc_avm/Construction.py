@@ -9,9 +9,11 @@ class Construction():
     """
     A complete construction notation consisting of boxes and noboxes
     """
-    def __init__(self):
+    def __init__(self, caption="", label=""):
         self.CreateOuterNode()
         self.CreateContentNode()
+        self.label = label
+        self.caption = caption
 
 
 class Htmlconstruction(Construction):
@@ -71,7 +73,30 @@ class Texconstruction(Construction):
         self.out.append(self.content)
         out = re.sub(r"\\+#",r"\#",self.out.dumps_as_content())
         out = re.sub(r"¤",r" ",out)
-        return "\n\n" + r"\vspace{0.4cm}" + "\n\n" +  r"\scriptsize " + "\n\n" + out + "\n\n" + r"\normalsize" + "\n\n" + r"\vspace{0.4cm}" + "\n\n"
+        return """
+        \\vspace{{0.4cm}}
+        
+        \\scriptsize 
+
+        \\FloatBarrier
+
+
+        \\begin{{avmfloat}}[tb]%
+        \\centering
+
+            {output}
+        
+        \\caption{{\\label{{mat:{lab}}} {cap} }}
+        \\end{{avmfloat}}
+
+        \\FloatBarrier
+
+        \\normalsize
+
+        
+        \\vspace{{0.4cm}}
+        
+        """.format(output=out, cap=self.caption, lab=self.label)
 
     def AddStatus(self, statuses):
         """
