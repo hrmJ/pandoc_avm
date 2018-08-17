@@ -81,7 +81,7 @@ class Texconstruction(Construction):
         \\FloatBarrier
 
 
-        \\begin{{avmfloat}}[tb]%
+        \\begin{{avmfloat}}[h]%
         \\centering
 
             {output}
