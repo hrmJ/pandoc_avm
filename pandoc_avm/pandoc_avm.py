@@ -2,7 +2,7 @@
 import sys
 import panflute as pf
 from xml.dom.minidom import parse, parseString
-from pandoc_avm import Texconstruction, Htmlconstruction, ParseConstruction, NodeGroup, Nobox
+from pandoc_avm import Texconstruction, Htmlconstruction, ParseConstruction, NodeGroup, Nobox, ParseStatus, Box
 from pyparsing import nestedExpr, originalTextFor
 
 def CreateAvm(raw, cxtype):
